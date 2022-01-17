@@ -1,6 +1,4 @@
-# npo-frontend-template
-
-This template will be used to create all NPO frontend repos
+# Wasteless
 
 ## Setting up development environment
 
@@ -9,13 +7,6 @@ To start working on with this project, follow these steps:
 1. Add the `.env` file stored in your projects Google Drive folder to the root of the project.
 1. Install NodeJS and yarn following the [instructions here](https://classic.yarnpkg.com/lang/en/docs/install).
 1. Navigate to the project folder in your terminal and run `yarn` to install required packages.
-
-## Project branching structure
-
-Due to complications with some of the GitHub Actions this project uses, the git branch structure is non-standard.
-
-1. `dev`: This is the main branch of the project. All PRs should be merged into this branch, as if it was "main".
-1. `main`: This is the "production-ready" branch of the project; `dev` should only be merged into `main` when it is at a presentable state.
 
 ## Available Scripts
 
