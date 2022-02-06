@@ -1,22 +1,18 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
+import Map from './components/Map/Map';
 import App from './App';
 // import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <Routes>
+      <Route exact path="/" element={<Map />} />
+      <Route path="/info" element={<App />} />
+      <Route path="/about" element={<App />} />
+    </Routes>
   </BrowserRouter>,
   document.getElementById('root'),
 );
-
-/*
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
-*/
