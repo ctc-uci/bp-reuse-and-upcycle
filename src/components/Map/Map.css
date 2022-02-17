@@ -7,7 +7,7 @@
 /* Customization of leaflet popup */
 .leaflet-popup-content-wrapper {
   width: 250px;
-  background-color: #171923;
+  background-color: #ffa500;
 }
 
 .leaflet-popup-tip {
