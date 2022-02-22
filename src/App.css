@@ -41,3 +41,61 @@
     transform: rotate(360deg);
   }
 }
+/* Nav Bar */
+
+.NavBar {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 7.81%;
+  bottom: 84.77%;
+}
+
+/* Base */
+.Base {
+  background: #f4f7f8;
+}
+
+/* Wasteless */
+
+.Wasteless {
+  position: absolute;
+  left: 5.14%;
+  right: 86.25%;
+  top: 9.86%;
+  bottom: 86.91%;
+
+  font-family: SF Pro;
+  font-style: normal;
+  font-weight: 510;
+  font-size: 28px;
+  line-height: 33px;
+
+  color: #015249;
+}
+
+/* Logo */
+
+.Logo {
+  position: absolute;
+  left: 1.88%;
+  right: 96.11%;
+  top: 9.86%;
+  bottom: 87%;
+}
+
+/* Map Frame */
+
+.MapFrame {
+  position: absolute;
+  left: 1.11%;
+  right: 0.97%;
+  top: 16.8%;
+  bottom: 1.56%;
+
+  background: #c4c4c4;
+  /* Gray */
+
+  border: 1px solid #a5a5af;
+  border-radius: 12px;
+}

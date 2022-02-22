@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import logo from './recycle.svg';
+import logo from './logo.svg';
 
 function App() {
   return (
