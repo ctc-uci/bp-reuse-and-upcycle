@@ -24,7 +24,7 @@ const Map = () => {
       />
       <Marker position={[33.64618214781334, -117.84274459127637]} icon={myIcon}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          It&apos;s-a me, Mario <br />
         </Popup>
       </Marker>
     </MapContainer>
