@@ -1,8 +1,10 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import './Map.css';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+
+import { NominatimJS } from '@owsas/nominatim-js';
 
 const myIcon = L.icon({
   iconUrl: 'https://freepngimg.com/thumb/mario/20723-2-mario-image.png',
@@ -12,6 +14,24 @@ const myIcon = L.icon({
 });
 
 const Map = () => {
+  const [points, setPoints] = useState([]);
+
+  useEffect(() => {
+    const getPoints = async () => {
+      const results = await NominatimJS.search({
+        q: 'thrift store, CA',
+      });
+
+      setPoints(results);
+    };
+
+    getPoints();
+  }, []);
+
+  useEffect(() => {
+    console.log(points);
+  }, [points]);
+
   return (
     <MapContainer
       center={[33.64618214781334, -117.84274459127637]}
@@ -27,6 +47,15 @@ const Map = () => {
           It&apos;s-a me, Mario <br />
         </Popup>
       </Marker>
+      {points.map(p => {
+        return (
+          <Marker key={p.place_id} position={[p.lat, p.lon]} icon={myIcon}>
+            <Popup>
+              It&apos;s-a me, Mario <br />
+            </Popup>
+          </Marker>
+        );
+      })}
     </MapContainer>
   );
 };
