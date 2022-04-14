@@ -19,7 +19,21 @@ const Map = () => {
   useEffect(() => {
     const getPoints = async () => {
       const results = await NominatimJS.search({
-        q: 'thrift store, CA',
+        q: 'Goodwill, Orange County, California',
+        limit: 50,
+      });
+
+      setPoints(results);
+    };
+
+    getPoints();
+  }, []);
+
+  useEffect(() => {
+    const getPoints = async () => {
+      const results = await NominatimJS.search({
+        q: 'Thrift Store, Orange County, California',
+        limit: 50,
       });
 
       setPoints(results);
