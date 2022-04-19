@@ -4,17 +4,23 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import 'leaflet/dist/leaflet.css';
 import Map from './components/Map/Map';
-import App from './App';
+import Info from './App';
 import About from './About';
+import NavBar from './components/Navigation Bar/navigation';
 // import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Routes>
-      <Route exact path="/" element={<Map />} />
-      <Route path="/info" element={<App />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
+    <>
+      <NavBar />
+      <main>
+        <Routes>
+          <Route exact path="/" element={<Map />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
+    </>
   </BrowserRouter>,
   document.getElementById('root'),
 );
