@@ -47,30 +47,32 @@ const Map = () => {
   }, [points]);
 
   return (
-    <MapContainer
-      center={[33.64618214781334, -117.84274459127637]}
-      zoom={50}
-      style={{ height: '1920' }}
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://api.mapbox.com/styles/v1/ghosnm/ckzq73c69001414nve9hlcx9d/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2hvc25tIiwiYSI6ImNrenE2eTZqcjM1N2oyb3FyeXBkaGwzMHoifQ.Y1Fk71N1-mAY4AAmXHAt6Q"
-      />
-      <Marker position={[33.64618214781334, -117.84274459127637]} icon={myIcon}>
-        <Popup>
-          It&apos;s-a me, Mario <br />
-        </Popup>
-      </Marker>
-      {points.map(p => {
-        return (
-          <Marker key={p.place_id} position={[p.lat, p.lon]} icon={myIcon}>
-            <Popup>
-              It&apos;s-a me, Mario <br />
-            </Popup>
-          </Marker>
-        );
-      })}
-    </MapContainer>
+    <div>
+      <MapContainer
+        center={[33.64618214781334, -117.84274459127637]}
+        zoom={50}
+        style={{ height: '1920' }}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://api.mapbox.com/styles/v1/ghosnm/ckzq73c69001414nve9hlcx9d/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZ2hvc25tIiwiYSI6ImNrenE2eTZqcjM1N2oyb3FyeXBkaGwzMHoifQ.Y1Fk71N1-mAY4AAmXHAt6Q"
+        />
+        <Marker position={[33.64618214781334, -117.84274459127637]} icon={myIcon}>
+          <Popup>
+            It&apos;s-a me, Mario <br />
+          </Popup>
+        </Marker>
+        {points.map(p => {
+          return (
+            <Marker key={p.place_id} position={[p.lat, p.lon]} icon={myIcon}>
+              <Popup>
+                It&apos;s-a me, Mario <br />
+              </Popup>
+            </Marker>
+          );
+        })}
+      </MapContainer>
+    </div>
   );
 };
 

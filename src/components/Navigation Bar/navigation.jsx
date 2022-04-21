@@ -5,20 +5,16 @@ import './navigation.css';
 
 const navBar = () => (
   <header className="main-nav">
-    <div className="main-nav_logo">
-      <h1> Wasteless</h1>
-    </div>
+    <nav className="main-nav_logo">
+      <NavLink to="/">Wasteless</NavLink>
+    </nav>
     <nav className="main-nav_items">
       <ul>
         <li>
-          <NavLink to="/">Homepage</NavLink>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li>
           <NavLink to="/info">Info</NavLink>
-        </li>
-        <li>
-          <NavLink to="/about">About</NavLink>
-          props
         </li>
       </ul>
     </nav>
