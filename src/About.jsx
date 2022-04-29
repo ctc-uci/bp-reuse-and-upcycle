@@ -23,6 +23,10 @@ function About() {
           so that they could reduce their overall waste.
         </p>
 
+        <h2 className="about-meet"> Meet the Team</h2>
+
+        <h1 className="about-team"> Meet the team!</h1>
+
         {/* Team members */}
         <h3 className="about-h3">Team Members:</h3>
         <p className="about-p">Dang Nguyen, Ethan So, Mazen Ghosn, Juhi Patel</p>
